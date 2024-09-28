@@ -57,14 +57,17 @@ This analysis was performed using Google Colab, leveraging libraries such as pan
 
 ### Key Questions Explored:
 1. Top 5 Zip Codes for 911 Calls:
-* Identified the top zip codes where the most 911 calls originated.
+  * Identified the top zip codes where the most 911 calls originated.
 2. Top 5 Townships for 911 Calls:
-* Explored which townships had the highest volume of emergency calls.
+  * Explored which townships had the highest volume of emergency calls.
 3. Common Reasons for 911 Calls:
-* Using the Reasons column, we found that the most common reason for 911 calls was EMS (Emergency Medical Services).
+  * Using the Reasons column, we found that the most common reason for 911 
+  calls was EMS (Emergency Medical Services).
 4. Time-Based Analysis:
-* Grouped the data by Hour, Month, and Day of Week to identify trends over time.
-* Investigated patterns by day of the week and month to understand peak times for calls.
+  * Grouped the data by Hour, Month, and Day of Week to identify trends 
+  over time.
+  * Investigated patterns by day of the week and month to understand peak 
+  times for calls.
 
 
 ## Data Visualization
@@ -72,25 +75,31 @@ Several visualizations were created to represent the analysis findings:
 
 1. Countplot of 911 Calls by Reason:
 A bar chart using seaborn to show the frequency of 911 calls for each reason (EMS, Fire, Traffic).
-[Countplot of 911 Calls By Reasons]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\countplot on reasons of 911 calls.png")
+[Countplot of 911 Calls By Reasons]![image](https://github.com/user-attachments/assets/e6ccef33-a2e9-4907-9dbd-4fbc43cb5c57)
+
 
 2. Countplot of Calls by Day of Week:
 Visualized the number of calls each day of the week, broken down by emergency reason.
-[Countplot of Calls by Day of Week]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\Countplot of Calls by Day of Week.png")
+[Countplot of Calls by Day of Week]![image](https://github.com/user-attachments/assets/25a0fb6d-b57d-4c86-a436-6ec0650695c9)
+
 
 3. Monthy Calls Trend:
 Created line plots to visualize the number of calls per month, revealing that some months had missing data.
-[Monthy Calls Trend]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\monthly calls trend.png")
+[Monthy Calls Trend]![image](https://github.com/user-attachments/assets/78c30b02-88c1-4f9a-aabe-4f1cd8732537)
 
-4. Heatmaps:
+
+5. Heatmaps:
 Used heatmaps to show the distribution of 911 calls by day of the week and hour, as well as by day of the week and month.
-[heatmap day-of-week]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\heatmap day-of-week.png")
-[heatmap day-hour]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\heatmap day-hour.png")
-[heatmap day-month]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\heatmap day-month.png")
+[heatmap day-of-week]![image](https://github.com/user-attachments/assets/a58b1241-a296-437d-9710-c0dbf869ff99)
 
-5. Clustermaps:
+[heatmap day-hour]![image](https://github.com/user-attachments/assets/e3c9d460-6ba7-486f-b9db-7969484392dd)
+
+[heatmap day-month]![image](https://github.com/user-attachments/assets/8ee01765-9e0b-495b-bc65-583ba8c13816)
+
+6. Clustermaps:
 Generated clustermaps to identify patterns in the data and cluster similar time periods based on call volume.
-[clustermap of day-month]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\clustermap of day-month.png")
+[clustermap of day-month]![image](https://github.com/user-attachments/assets/2404cdac-f915-4d0b-b6a4-2f9272450703)
+
 
 ## Recommendation
 It is recommended that emergency services use this data to optimize resource allocation by focusing on high-call periods and geographical hotspots.
