@@ -43,16 +43,60 @@ The insights derived from this analysis can be used by emergency service departm
 The dataset used in this analysis is sourced from Kaggle and contains detailed information about 911 emergency calls, including timestamps, locations, and call descriptions.
 
 ## Data Cleaning and Processing
-(To be filled with details about data cleaning steps, handling missing values, data transformation, etc.)
+### Handling Missing Values:
+* The dataset contained some missing values in the zip, twp, and addr columns.
+* I did not fill missing values as they were minimal and did not significantly impact the analysis.
+### Data Type Conversion:
+* The timeStamp column, initially in string format, was converted to DateTime objects using pd.to_datetime() to allow for time-based analysis.
+### Feature Extraction:
+* Extracted new features from the timeStamp column: Hour, Month, Day of Week, and Date.
+* Created a Reasons column by extracting the emergency type (EMS, Fire, Traffic) from the title column.
 
 ## Data Analysis
-(To be filled with details about the analytical methods used, such as time series analysis, frequency analysis, etc.)
+This analysis was performed using Google Colab, leveraging libraries such as pandas, seaborn, and matplotlib.
+
+### Key Questions Explored:
+1. Top 5 Zip Codes for 911 Calls:
+* Identified the top zip codes where the most 911 calls originated.
+2. Top 5 Townships for 911 Calls:
+* Explored which townships had the highest volume of emergency calls.
+3. Common Reasons for 911 Calls:
+* Using the Reasons column, we found that the most common reason for 911 calls was EMS (Emergency Medical Services).
+4. Time-Based Analysis:
+* Grouped the data by Hour, Month, and Day of Week to identify trends over time.
+* Investigated patterns by day of the week and month to understand peak times for calls.
+
 
 ## Data Visualization
-(To be filled with descriptions of the visualizations created, such as heatmaps, bar charts, line graphs, etc.)
+Several visualizations were created to represent the analysis findings:
+
+1. Countplot of 911 Calls by Reason:
+A bar chart using seaborn to show the frequency of 911 calls for each reason (EMS, Fire, Traffic).
+[Countplot of 911 Calls By Reasons]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\countplot on reasons of 911 calls.png")
+
+2. Countplot of Calls by Day of Week:
+Visualized the number of calls each day of the week, broken down by emergency reason.
+[Countplot of Calls by Day of Week]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\Countplot of Calls by Day of Week.png")
+
+3. Monthy Calls Trend:
+Created line plots to visualize the number of calls per month, revealing that some months had missing data.
+[Monthy Calls Trend]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\monthly calls trend.png")
+
+4. Heatmaps:
+Used heatmaps to show the distribution of 911 calls by day of the week and hour, as well as by day of the week and month.
+[heatmap day-of-week]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\heatmap day-of-week.png")
+[heatmap day-hour]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\heatmap day-hour.png")
+[heatmap day-month]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\heatmap day-month.png")
+
+5. Clustermaps:
+Generated clustermaps to identify patterns in the data and cluster similar time periods based on call volume.
+[clustermap of day-month]("C:\Users\hp\OneDrive\Documents\projects\Python\911 Calls Analysis Exploring Public Safety Data\visualizations\clustermap of day-month.png")
 
 ## Recommendation
-(To be filled with actionable recommendations based on the analysis findings)
+It is recommended that emergency services use this data to optimize resource allocation by focusing on high-call periods and geographical hotspots.
 
 ## Conclusion
-(To be filled with a summary of key findings and their implications)
+The analysis of 911 emergency calls provides key insights into how emergency services operate and where their resources are most needed. The high volume of EMS calls points to a strong need for medical-related emergency preparedness. 
+
+## LINK
+https://drive.google.com/file/d/10KfbNkBAfoK4p0-I7hxjOl3GynrePZ1b/view?usp=sharing
